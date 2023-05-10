@@ -1,98 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Room</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="experience">
-      <canvas class="experience-canvas"></canvas>
+    <div class="intro">
+      <section id="intro" class="section">
+        <div class="intro-wrapper">
+          <canvas class="experience-canvas"></canvas>
+          <div class="hero-main">
+            <h1 class="hero-main-title">Hi, I'm Andy!</h1>
+            <p class="hero-main-description">Currently I'm <span
+                class="auto-type"></span></p>
+          </div>
+          <div class="hero-second">
+            <p class="hero-second-subheading first-sub">Andy Bukovcan</p>
+            <p class="hero-second-subheading second-sub">Portfolio</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="page" class="section">
+        <div class="text-element">
+          <p class="section-text">About Me</p>
+        </div>
+        
+        
+        <div class="text-element">
+          <p class="section-text">Skills</p>
+        </div>
+        
+        
+        <div class="text-element">
+          <p class="section-text">Projects</p>
+        </div>
+        
+        
+        <div class="text-element">
+          <p class="section-text">Contact</p>
+        </div>
+      </section>
     </div>
-    <div class="page">
-      <div class="page-wrapper">
-        <section class="hero">
-          <div class="hero-wrapper">
-            <div class="hero-main">
-              <h1 class="hero-main-title">Andy 1</h1>
-              <p class="hero-main-description">write smt here</p>
-            </div>
-            <div class="hero-second">
-              <p class="hero-second-subheading">Andy 2</p>
-              <p class="hero-second-subheading">Portfolio</p>
-            </div>
-          </div>
-        </section>
-        <div class="section-margin"></div>
-        <section class="first-section section left">
-          <div class="section-intro-wrapper">
-            <h1 class="section-title">
-              <span class="section-title-text">About Me</span>
-              <div class="section-title-decoration styleOne"></div>
-              <div class="section-title-decoration styleTwo"></div>
-              <div class="section-title-decoration styleThree"></div>
-            </h1>
-            <span class="section-number">01</span>
-          </div>
-          <div class="section-detail-wrapper">
-            <h3 class="section-heading">Lorem Ipsum</h3>
-            <p class="section-text">Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Odio fugiat ratione inventore iste, numquam
-              commodi doloremque, pariatur consequuntur, tempore quam voluptas!
-              Voluptates, atque. Iure eius dolor reiciendis aliquam recusandae
-              nobis.</p>
-            <h3 class="section-heading">Lorem Ipsum</h3>
-            <p class="section-text">Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Odio fugiat ratione inventore iste, numquam
-              commodi doloremque, pariatur consequuntur, tempore quam voluptas!
-              Voluptates, atque. Iure eius dolor reiciendis aliquam recusandae
-              nobis.</p>
-            <h3 class="section-heading">Lorem Ipsum</h3>
-            <p class="section-text">Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Odio fugiat ratione inventore iste, numquam
-              commodi doloremque, pariatur consequuntur, tempore quam voluptas!
-              Voluptates, atque. Iure eius dolor reiciendis aliquam recusandae
-              nobis.</p>
-          </div>
-        </section>
 
 
-        <section class="second-section section right">
-          <div class="section-intro-wrapper">
-            <h1 class="section-title">
-              <span class="section-title-text">My Work</span>
-              <div class="section-title-decoration styleOne"></div>
-              <div class="section-title-decoration styleTwo"></div>
-              <div class="section-title-decoration styleThree"></div>
-            </h1>
-            <span class="section-number">02</span>
-          </div>
-          <div class="section-detail-wrapper">
-            <h3 class="section-heading">Lorem Ipsum</h3>
-            <p class="section-text">Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Odio fugiat ratione inventore iste, numquam
-              commodi doloremque, pariatur consequuntur, tempore quam voluptas!
-              Voluptates, atque. Iure eius dolor reiciendis aliquam recusandae
-              nobis.</p>
-            <h3 class="section-heading">Lorem Ipsum</h3>
-            <p class="section-text">Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Odio fugiat ratione inventore iste, numquam
-              commodi doloremque, pariatur consequuntur, tempore quam voluptas!
-              Voluptates, atque. Iure eius dolor reiciendis aliquam recusandae
-              nobis.</p>
-            <h3 class="section-heading">Lorem Ipsum</h3>
-            <p class="section-text">Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Odio fugiat ratione inventore iste, numquam
-              commodi doloremque, pariatur consequuntur, tempore quam voluptas!
-              Voluptates, atque. Iure eius dolor reiciendis aliquam recusandae
-              nobis.</p>
-          </div>
-        </section>
-
-        <div class="section-margin"></div>
-      </div>
-    </div>
+    <!-- js-links -->
     <script type="module" src="/main.js"></script>
+    <script src="scroll.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+    var typed = new Typed(".auto-type", {
+      strings: ["coding", "studying", "playing games", "sleeping", "watching tv", "eating"],
+      typeSpeed: 200,
+      backSpeed: 200,
+      loop: true
+    })
+  </script>
   </body>
 </html>

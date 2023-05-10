@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import Experience from "../Experience.js";
-import GSAP from "gsap";
+import { gsap } from "gsap";
 
 export default class Controls {
   constructor() {
@@ -9,10 +9,30 @@ export default class Controls {
     this.resources = this.experience.resources;
     this.time = this.experience.time;
     this.camera = this.experience.camera;
+    this.room = this.experience.world.room.actualRoom;
 
-
-
+    this.setScrollTrigger();
   }
+
+  setScrollTrigger() {
+    let mm = gsap.matchMedia();
+
+    mm.add("(min-width: 969px)", () => {
+      console.log("desktop");
+
+      // reset:
+      this.room.scale.set(0.5, 0.5, 0.5);
+    });
+    
+    mm.add("(max-width: 968px)", () => {
+      console.log("mobile");
+
+      // reset:
+
+      this.room.scale.set(0.35, 0.35, 0.35);
+    });
+  }
+
 
   resize() {
 
