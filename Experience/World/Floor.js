@@ -22,9 +22,6 @@ export default class Room {
         this.plane.receiveShadow = true;
     }
     
-
-
-
     resize() {
 
     }
