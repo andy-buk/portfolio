@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Andy's Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="apple.png" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
   </head>
   <body>
-
-
     <!-- Start of Navbar -->
     <nav class="navbar">
       <ul>
@@ -19,7 +22,6 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-
 
     <!-- Start of Intro -->
     <div class="intro">
@@ -41,7 +43,6 @@
         </div>
       </section>
     </div>
-
 
     <!-- Start of About Me -->
     <div class="page-wrapper">
@@ -72,42 +73,222 @@
         </div>
       </section>
 
-
       <!-- Start of Skills -->
       <section id="skills" class="section">
         <div class="text-element">
           <h2 class="section-text">My skills?</h2>
           <h1 class="section-text">Skills</h1>
-              <div class="skills-wrapper">
-                <div class="logo-container">
-                  <img class="logo" src="/language-logos/html-logo.png" alt="HTML Logo" />
-                  <img class="logo" src="/language-logos/css-logo.png" alt="CSS Logo" />
-                  <img class="logo" src="/language-logos/js-logo.png" alt="JavaScript Logo" />
-                  <img class="logo" src="/language-logos/c-logo.png" alt="C Logo" />
-                  <img class="logo" src="/language-logos/cpp-logo.png" alt="C++ Logo" />
-                  <img class="logo" src="/language-logos/java-logo.png" alt="Java Logo" />
-                  <img class="logo" src="/language-logos/python-logo.png" alt="Python Logo" />
-                  <img class="logo" src="/language-logos/react-logo.png" alt="React Logo" />
-                </div>
-              </div>
+          <div class="skills-wrapper">
+            <div class="logo-container">
+              <img
+                class="logo"
+                src="/language-logos/html-logo.png"
+                alt="HTML Logo"
+              />
+              <img
+                class="logo"
+                src="/language-logos/css-logo.png"
+                alt="CSS Logo"
+              />
+              <img
+                class="logo"
+                src="/language-logos/js-logo.png"
+                alt="JavaScript Logo"
+              />
+              <img class="logo" src="/language-logos/c-logo.png" alt="C Logo" />
+              <img
+                class="logo"
+                src="/language-logos/cpp-logo.png"
+                alt="C++ Logo"
+              />
+              <img
+                class="logo"
+                src="/language-logos/java-logo.png"
+                alt="Java Logo"
+              />
+              <img
+                class="logo"
+                src="/language-logos/python-logo.png"
+                alt="Python Logo"
+              />
+              <img
+                class="logo"
+                src="/language-logos/react-logo.png"
+                alt="React Logo"
+              />
+            </div>
+          </div>
         </div>
       </section>
-
 
       <!-- Start of Projects -->
       <section id="projects" class="section">
         <div class="text-element">
           <h2 class="section-text">What am I working on?</h2>
           <h1 class="section-text">Projects</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-            placeat id maiores quis excepturi quia omnis vel beatae, nisi unde
-            eaque ea cupiditate dolore veniam temporibus voluptatem iusto autem
-            saepe.
-          </p>
+          <div class="work-filters">
+            <span class="work-item active-work" data-filter="all">All</span>
+            <span class="work-item" data-filter=".category-1">CategoryA</span>
+            <span class="work-item" data-filter=".category-2">CategoryB</span>
+            <span class="work-item" data-filter=".category-3">CategoryC</span>
+          </div>
+
+          <div class="work-container container grid">
+            <div class="work-card mix category-1">
+              <img src="sudoku-project.png" alt="" class="work-img" />
+              <h3 class="work-title">Sudoku Solver</h3>
+              <span class="work-button">View More
+                <i class="uil uil-arrow-right work-button-icon"></i>
+              </span>
+              <div class="portfolio-item-details">
+                <h3 class="details-title">Sudoku Solver</h3>
+                <p class="details-description">
+                  The Sudoku Solver web application is a user-friendly,
+                  interactive tool designed for Sudoku enthusiasts and puzzle
+                  solvers alike. This project aims to provide an efficient and
+                  convenient solution for those who enjoy solving Sudoku puzzles
+                  but may encounter challenges or simply wish to verify their
+                  solutions.
+                  <br><br>
+                  Built using HTML, CSS, and JavaScript, the application allows users to input their Sudoku puzzles into a responsive 9x9 grid, and with a click of a button, it generates the correct solution, if one exists. This web app caters to a wide audience, from beginners who are just starting their journey into the world of Sudoku to seasoned players seeking a quick and reliable way to validate their solutions.
+                </p>
+                <ul class="details-info">
+                    <span><a href="https://andy-buk.github.io/sudoku-solver/" target="_blank">View here</a></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="work-card mix category-1">
+              <img src="coming-soon.webp" alt="" class="work-img" />
+              <h3 class="work-title">Coming Soon</h3>
+              <span class="work-button">View More
+                <i class="uil uil-arrow-right work-button-icon"></i>
+              </span>
+              <div class="portfolio-item-details">
+                <h3 class="details-title">Coming Soon</h3>
+                <p class="details-description">
+                  More projects are currently being created! :)
+                </p>
+                <ul class="details-info">
+                    <span><a href="">View here</a></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="work-card mix category-2">
+              <img src="coming-soon.webp" alt="" class="work-img" />
+              <h3 class="work-title">Coming Soon</h3>
+              <span class="work-button">View More
+                <i class="uil uil-arrow-right work-button-icon"></i>
+              </span>
+              <div class="portfolio-item-details">
+                <h3 class="details-title">Coming Soon</h3>
+                <p class="details-description">
+                  More projects are currently being created! :)
+                </p>
+                <ul class="details-info">
+                    <span><a href="">View here</a></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="work-card mix category-2">
+              <img src="coming-soon.webp" alt="" class="work-img" />
+              <h3 class="work-title">Coming Soon</h3>
+              <span class="work-button">View More
+                <i class="uil uil-arrow-right work-button-icon"></i>
+              </span>
+              <div class="portfolio-item-details">
+                <h3 class="details-title">Coming Soon</h3>
+                <p class="details-description">
+                  More projects are currently being created! :)
+                </p>
+                <ul class="details-info">
+                    <span><a href="">View here</a></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="work-card mix category-3">
+              <img src="coming-soon.webp" alt="" class="work-img" />
+              <h3 class="work-title">Coming Soon</h3>
+              <span class="work-button">View More
+                <i class="uil uil-arrow-right work-button-icon"></i>
+              </span>
+              <div class="portfolio-item-details">
+                <h3 class="details-title">Coming Soon</h3>
+                <p class="details-description">
+                  More projects are currently being created! :)
+                </p>
+                <ul class="details-info">
+                    <span><a href="">View here</a></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="work-card mix category-3">
+              <img src="coming-soon.webp" alt="" class="work-img" />
+              <h3 class="work-title">Coming Soon</h3>
+              <span class="work-button">View More
+                <i class="uil uil-arrow-right work-button-icon"></i>
+              </span>
+              <div class="portfolio-item-details">
+                <h3 class="details-title">Coming Soon</h3>
+                <p class="details-description">
+                  More projects are currently being created! :)
+                </p>
+                <ul class="details-info">
+                    <span><a href="">View here</a></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
+      <!-- Portfolio Popup -->
+      <!-- This does not control the project text -->
+      <div class="portfolio-popup">
+        <div class="portfolio-popup-inner">
+          <div class="portfolio-popup-content grid">
+            <span class="portfolio-popup-close"
+              ><i class="uil uil-times"></i
+            ></span>
+            <div class="pp-thumbnail">
+              <!-- CHANGE PHOTO AFTER -->
+              <img src="work-1.jpeg" alt="" class="portfolio-popup-img" />
+            </div>
+            <div class="portfolio-popup-info">
+              <div class="portfolio-popup-subtitle">
+                <span></span>
+              </div>
+              <div class="portfolio-popup-body">
+                <h3 class="details-title">App for technology & service</h3>
+                <p class="details-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic
+                  quo possimus ducimus ut non modi vel porro laudantium aperiam
+                  consequatur voluptatem magni illo, optio omnis dicta vitae
+                  recusandae architecto praesentium?
+                </p>
+                <ul class="details-info">
+                  <li>Created - <span>4 dec 2020</span></li>
+                  <li>Technologies - <span>html css</span></li>
+                  <li>Role - <span>frontend</span></li>
+                  <li>
+                    <span><a href="#"></a></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- Start of Contact -->
       <section id="contact" class="section">
@@ -128,6 +309,7 @@
     <script type="module" src="/main.js"></script>
     <script src="scroll.js"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="mixitup.min.js"></script>
 
     <!-- Typing Animation -->
     <script>
