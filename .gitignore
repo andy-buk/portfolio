@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 *.glb
+*.json
+mixitup.min.js
 
 # Editor directories and files
 .vscode/*
