@@ -31,13 +31,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
 
-    function onWindowResize() {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
-    }
+    // function onWindowResize() {
+    //     camera.aspect = window.innerWidth / window.innerHeight;
+    //     camera.updateProjectionMatrix();
+    //     renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
+    // }
 
-    window.addEventListener('resize', onWindowResize);
+    // window.addEventListener('resize', onWindowResize);
 
     const clock = new THREE.Clock(); // for managing time
 

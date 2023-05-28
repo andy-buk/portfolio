@@ -106,14 +106,50 @@ img {
 }
 
 /* ABOUT ME */
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-element {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.myself {
+  flex: 0 0 400px;
+  height: 500px; /* Adjust this as needed */
+  object-fit: cover;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+/* Media query */
+@media screen and (max-width: 800px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+  .text-element {
+    padding-left: 0;
+    text-align: center; /* Optional: center the text */
+  }
+  .myself {
+    margin-bottom: 20px; /* space between the image and text */
+  }
+}
+
+
 .about-me li {
   font-size: 18px;
   margin-bottom: 5px;
 }
 
 h2.section-text {
-  margin-top: 20px; /* adjust this value as needed */
+  margin-top: 20px;
 }
+
 
 
 /* skills here */
