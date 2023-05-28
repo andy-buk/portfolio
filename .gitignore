@@ -18,6 +18,7 @@ draco/*
 *.webp
 *.png
 *.jpg
+*.php
 
 # Editor directories and files
 .vscode/*
