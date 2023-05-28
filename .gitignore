@@ -14,6 +14,7 @@ dist-ssr
 *.glb
 *.json
 mixitup.min.js
+draco/*
 
 # Editor directories and files
 .vscode/*
