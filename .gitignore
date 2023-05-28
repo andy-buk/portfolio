@@ -14,11 +14,10 @@ dist-ssr
 *.glb
 *.json
 mixitup.min.js
-draco/*
+public
 *.webp
 *.png
 *.jpg
-*.php
 
 # Editor directories and files
 .vscode/*
