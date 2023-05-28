@@ -16,6 +16,8 @@ dist-ssr
 mixitup.min.js
 draco/*
 *.webp
+*.png
+*.jpg
 
 # Editor directories and files
 .vscode/*
