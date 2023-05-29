@@ -127,7 +127,7 @@ img {
 }
 
 /* Media query */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
   .content-wrapper {
     flex-direction: column;
   }
@@ -484,7 +484,7 @@ span {
 
 .canvas-wrapper {
   display: flex;
-  padding: 10px;
+  padding: 30px;
 }
 
 .contact-form {
@@ -535,7 +535,6 @@ span {
   font-size: 12px;
   color: var(--text-grey);
 }
-
 
 
 /* MEDIA QUERIES */

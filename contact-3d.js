@@ -3,14 +3,15 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 document.addEventListener('DOMContentLoaded', (event) => {
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000); // initially setting aspect ratio to 1
 
     camera.position.z = 1.5;
 
     const canvas = document.getElementById('contact3d');
     const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true });
 
-    renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
+    const size = Math.min(window.innerWidth / 2, window.innerHeight / 2);
+    renderer.setSize(size, size); // set renderer size to be square
 
     const loader = new GLTFLoader();
 
@@ -30,21 +31,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.error(error);
     });
 
-
-    // function onWindowResize() {
-    //     camera.aspect = window.innerWidth / window.innerHeight;
-    //     camera.updateProjectionMatrix();
-    //     renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
-    // }
-
-    // window.addEventListener('resize', onWindowResize);
-
-    const clock = new THREE.Clock(); // for managing time
+    const clock = new THREE.Clock();
 
     function animate() {
         requestAnimationFrame(animate);
-
-        // Run the animation mixer
         if (mixer) {
             mixer.update(clock.getDelta());
         }
@@ -52,4 +42,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
         renderer.render(scene, camera);
     }
     animate();
+
+    window.addEventListener('resize', onWindowResize, false);
+
+    function onWindowResize() {
+        const size = Math.min(window.innerWidth / 2, window.innerHeight / 2);
+        renderer.setSize(size, size); // adjust renderer size on window resize
+        camera.aspect = 1; // adjust camera aspect ratio on window resize
+        camera.updateProjectionMatrix();
+    }
 });
