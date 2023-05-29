@@ -355,7 +355,7 @@ h2.section-text {
   position: fixed;
   top: 0;
   width: 100%;
-  background: var(--background-color);
+  background: transparent;
   padding: 20px 0;
   z-index: 100;
 }
@@ -379,12 +379,6 @@ h2.section-text {
 
 .navbar a:hover {
   color: var(--primary-purple);
-}
-
-/* manages the whole page
-can also delete towards the end when i finalize :D */
-.page-wrapper {
-  margin: 20px;
 }
 
 .section h1 {
@@ -515,9 +509,9 @@ span {
   border: 1px solid var(--primary-purple);
   font-size: 12px;
   color: var(--text-grey);
+  resize: none;
 }
 
-/* SEND MESSAGE BUTTON */
 .form-field input[type="submit"] {
   background: var(--primary-purple);
   color: var(--primary-color);
@@ -540,11 +534,6 @@ span {
 .contact-form input::placeholder, .contact-form textarea::placeholder {
   font-size: 12px;
   color: var(--text-grey);
-}
-
-#contact3d {
-  width: 100%;
-  height: 100%;
 }
 
 
