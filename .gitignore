@@ -15,9 +15,7 @@ dist-ssr
 *.json
 mixitup.min.js
 public/*
-*.webp
-*.png
-*.jpg
+*.zip
 
 # Editor directories and files
 .vscode/*
