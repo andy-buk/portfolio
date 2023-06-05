@@ -1,4 +1,5 @@
 import Experience from "./Experience/Experience.js"
+import mixitup from 'mixitup';
 
 const experience = new Experience(document.querySelector(".experience-canvas"));
 

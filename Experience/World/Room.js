@@ -39,14 +39,11 @@ export default class Room {
 
         this.scene.add(this.actualRoom);
         this.actualRoom.scale.set(0.5, 0.5, 0.5);
-        // rotation:
-        // this.actualRoom.rotation.y = Math.PI;
     }
 
     setAnimation() {
         this.mixer = new THREE.AnimationMixer(this.actualRoom);
 
-        // console.log(this.room);
         // fix the animation number in the future
         this.chair = this.mixer.clipAction(this.room.animations[7]);
         this.chair.play();

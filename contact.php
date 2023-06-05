@@ -1,24 +1,25 @@
 <?php
-  $message_sent = false;
-  if (isset($_POST['email']) && $_POST['email'] != "") {
-    if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $userName = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+        $userEmail = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+        $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
 
-        $userName = $_POST['name'];
-        $userEmail = $_POST['email'];
-        $messageSubject = "Message";
-        $message = $_POST['message'];
-    
-        $to = "blah@blah.com";
-        $body = "";
-    
-        $body .= "From: ".$userName."\r\n";
-        $body .= "Email: ".$userEmail."\r\n";
-        $body .= "Message: ".$message."\r\n";
-    
-        mail($to, $messageSubject, $body);
+        if ($userName && $userEmail && filter_var($userEmail, FILTER_VALIDATE_EMAIL) && $message) {
+            $messageSubject = "Message";
+            $to = "admin@andyb.tech";
+            $body = "";
 
-        $message_sent = true;
+            $body .= "From: ".$userName."\r\n";
+            $body .= "Email: ".$userEmail."\r\n";
+            $body .= "Message: ".$message."\r\n";
+
+            if(mail($to, $messageSubject, $body)) {
+                echo "Mail sent successfully!";
+            } else {
+                echo "Mail failed to send.";
+            }
+        } else {
+            echo "Please fill in all fields and ensure email is valid.";
+        }
     }
-  }
-  // code for email not sending
 ?>
