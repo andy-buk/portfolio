@@ -253,19 +253,29 @@
 
 <script>
   document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault(); // prevent the form from refreshing the page
+      event.preventDefault();
   
-      var xhr = new XMLHttpRequest(); // create a new request
-      xhr.open(this.method, this.action); // set the request method and url
-      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); // set form header
-      xhr.onreadystatechange = function() { // set the state change callback
-          if(xhr.readyState === 4 && xhr.status === 200) { // if the request is complete and successful
-              alert("Your message has been sent successfully!");
-          } else if (xhr.readyState === 4 && xhr.status !== 200) { // if the request is complete and not successful
-              alert("Oops! There was a problem with your submission.");
+      fetch(this.action, {
+          method: this.method,
+          headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams(new FormData(event.target)).toString(),
+      })
+      .then(response => {
+          if (response.ok) {
+              return response.text();
+          } else {
+              throw new Error('Network response was not ok');
           }
-      };
-      xhr.send(new URLSearchParams(new FormData(event.target)).toString()); // send the form data
+      })
+      .then(data => {
+          alert("Your message has been sent successfully!");
+      })
+      .catch(error => {
+          alert("Oops! There was a problem with your submission.");
+          console.error('Error:', error);
+      });
   });
   </script>
 
