@@ -18,7 +18,7 @@ export default class Room {
           };
         
         this.setModel();
-        this.setAnimation();
+        // this.setAnimation();
         this.onMouseMove();
     }
 
@@ -41,13 +41,13 @@ export default class Room {
         this.actualRoom.scale.set(0.5, 0.5, 0.5);
     }
 
-    setAnimation() {
-        this.mixer = new THREE.AnimationMixer(this.actualRoom);
+    // setAnimation() {
+    //     this.mixer = new THREE.AnimationMixer(this.actualRoom);
 
-        // fix the animation number in the future
-        this.chair = this.mixer.clipAction(this.room.animations[7]);
-        this.chair.play();
-    }
+    //     // fix the animation number in the future
+    //     this.chair = this.mixer.clipAction(this.room.animations[7]);
+    //     this.chair.play();
+    // }
 
     onMouseMove() {
         window.addEventListener("mousemove", (e) => {
@@ -70,6 +70,6 @@ export default class Room {
 
         this.actualRoom.rotation.y = this.lerp.current;
 
-        this.mixer.update(this.time.delta * 0.0009);
+        // this.mixer.update(this.time.delta * 0.0009);
     }
 }

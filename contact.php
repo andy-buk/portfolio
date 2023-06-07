@@ -13,13 +13,7 @@
             $body .= "Email: ".$userEmail."\r\n";
             $body .= "Message: ".$message."\r\n";
 
-            if(mail($to, $messageSubject, $body)) {
-                echo "Mail sent successfully!";
-            } else {
-                echo "Mail failed to send.";
-            }
-        } else {
-            echo "Please fill in all fields and ensure email is valid.";
+            mail($to, $messageSubject, $body);
         }
     }
 ?>
