@@ -237,6 +237,8 @@ h2.section-text {
 .work-img {
   border-radius: 0.5rem;
   margin-bottom: 10px;
+  width: 500px;
+  height: 280px;
 }
 
 .work-title {

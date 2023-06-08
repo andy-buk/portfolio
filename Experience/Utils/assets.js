@@ -2,14 +2,11 @@ export default [
   {
     name: "room",
     type: "glbModel",
-    path: "/models/portfolio.glb"
+    path: "/models/low-room.glb"
   },
-  
-  // use this if a video texture is needed
-  //,
-  // {
-  //   name: "screen",
-  //   type: "videoTexture",
-  //   path: "path here"
-  // }
+  {
+    name: "screen",
+    type: "imageTexture",
+    path: "/textures/lowpoly_tex(1).png"
+  },
 ]

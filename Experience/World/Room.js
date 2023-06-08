@@ -23,23 +23,32 @@ export default class Room {
     }
 
     setModel() {
-        this.actualRoom.children.forEach((child) => {
-            child.castShadow = true;
-            child.receiveShadow = true;
 
-            if (child instanceof THREE.Group) {
-                child.children.forEach((groupchild) => {
-                    groupchild.castShadow = true;
-                    groupchild.receiveShadow = true;
+        // console.log(this.resources.items.screen.image);
+
+        this.actualRoom.traverse((child) => {
+            if (child.isMesh) {
+                child.material.map = this.resources.items.screen;  // 'screen' is the texture name defined in the assets.
+                
+                child.material.needsUpdate = true;
+                child.castShadow = true;
+                child.receiveShadow = true;
+            } else if (child instanceof THREE.Group) {
+                child.children.forEach((groupChild) => {
+                    if (groupChild.isMesh) {
+                        groupChild.material.map = this.resources.items.screen;
+                        groupChild.material.needsUpdate = true;
+                    }
+                    groupChild.castShadow = true;
+                    groupChild.receiveShadow = true;
                 })
             }
-        })
-
-        // can also update any specific textures here
-
+        });
+    
         this.scene.add(this.actualRoom);
         this.actualRoom.scale.set(0.5, 0.5, 0.5);
     }
+    
 
     // setAnimation() {
     //     this.mixer = new THREE.AnimationMixer(this.actualRoom);
