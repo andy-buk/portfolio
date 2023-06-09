@@ -48,20 +48,7 @@ export default class Resources extends EventEmitter {
         this.videoTexture[asset.name].generateMipmaps = false;
         this.videoTexture[asset.name].encoding = THREE.sRGBEncoding;
         this.singleAssetLoaded(asset, this.videoTexture[asset.name]);
-      } else if (asset.type === "imageTexture") {
-        const loader = new THREE.TextureLoader();
-        loader.load(
-          asset.path,
-          (texture) => {
-            this.singleAssetLoaded(asset, texture);
-          },
-          undefined,
-          function (err) {
-            console.error('An error occurred while loading texture.');
-          }
-        );
       }
-      
     }
   }
 
