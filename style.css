@@ -460,8 +460,8 @@ span {
   color: var(--primary-color);
 }
 
-.hero-second-subheading {
-  font-size: 32px;
+.hero-second-subheading.first-sub, .hero-second-subheading.second-sub {
+  font-size: 20px;
   text-transform: uppercase;
   color: var(--primary-color);
 }

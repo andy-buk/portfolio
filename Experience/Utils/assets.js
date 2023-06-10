@@ -2,6 +2,6 @@ export default [
   {
     name: "room",
     type: "glbModel",
-    path: "/models/room5.glb"
+    path: "/models/final3-v1.glb"
   },
 ]

@@ -1,13 +1,13 @@
 var typed = new Typed(".auto-type", {
   strings: [
-    "coding",
-    "studying",
-    "playing games",
-    "sleeping",
-    "watching tv",
-    "eating",
+    "unraveling the mysteries of the code universe",
+    "venturing into the depths of knowledge through studying",
+    "entering boundless realms of fantasy with gaming",
+    "embarking on rejuvenating journeys to dreamland",
+    "immersing into diverse realities with television",
+    "savoring the symphony of flavors in every meal",
   ],
-  typeSpeed: 200,
-  backSpeed: 200,
+  typeSpeed: 70,
+  backSpeed: 70,
   loop: true,
 });
