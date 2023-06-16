@@ -3,7 +3,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 document.addEventListener('DOMContentLoaded', (event) => {
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000); // initially setting aspect ratio to 1
+    const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
 
     camera.position.z = 1.5;
 
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true });
 
     const size = Math.min(window.innerWidth / 2, window.innerHeight / 2);
-    renderer.setSize(size, size); // set renderer size to be square
+    renderer.setSize(size, size);
 
     const loader = new GLTFLoader();
 
@@ -47,8 +47,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     function onWindowResize() {
         const size = Math.min(window.innerWidth / 2, window.innerHeight / 2);
-        renderer.setSize(size, size); // adjust renderer size on window resize
-        camera.aspect = 1; // adjust camera aspect ratio on window resize
+        renderer.setSize(size, size);
+        camera.aspect = 1;
         camera.updateProjectionMatrix();
     }
 });
