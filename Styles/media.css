@@ -1,0 +1,105 @@
+@media (max-width: 1150px) {
+  .work-container {
+    grid-template-columns: repeat(2, 330px);
+  }
+}
+
+@media (max-width: 968px) {
+  .section{
+    width: 100%;
+  }
+  
+  .hero-main{
+    bottom: 120px;
+  }
+
+  .hero-second{
+    top: 160px;
+  }
+
+  .hero-main-title,
+  .hero-main-description,
+  .hero-second-subheading{
+    font-size: 32px;
+  }
+
+  .hero-main-description,
+  .hero-second-subheading{
+    font-size: 18px;
+  }
+
+  .portfolio-popup-inner {
+    width: 420px;
+    padding: 1.5rem;
+  }
+
+  .portfolio-popup-content {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+  }
+
+  .portfolio-item-details {
+    margin-bottom: 1px;
+  }
+
+  img {
+    height: 300px;
+  }
+
+  .portfolio-popup-img,
+  .details-title {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+  .text-element {
+    padding-left: 0;
+    text-align: center;
+  }
+  .myself {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 750px) {
+  .work-container {
+    grid-template-columns: repeat(1, 330px);
+  }
+}
+
+@media (max-width: 550px) {
+  .work-filters span {
+    font-size: 14px;
+  }
+
+  .navbar a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 450px) {
+  .work-filters span {
+    font-size: 12px;
+  }
+
+  .navbar a {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar a {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 280px) {
+  .navbar a {
+    font-size: 7px;
+  }
+}

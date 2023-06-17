@@ -24,7 +24,6 @@ setSunlight() {
     this.scene.add(this.ambientLight);
 }
 
-
     resize() {
 
     }

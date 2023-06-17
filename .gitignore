@@ -16,6 +16,7 @@ dist-ssr
 mixitup.min.js
 public/*
 *.zip
+.gitignore
 
 # Editor directories and files
 .vscode/*

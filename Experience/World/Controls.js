@@ -18,19 +18,13 @@ export default class Controls {
     let mm = gsap.matchMedia();
 
     mm.add("(min-width: 969px)", () => {
-
-      // reset:
       this.room.scale.set(0.5, 0.5, 0.5);
     });
     
     mm.add("(max-width: 968px)", () => {
-
-      // reset:
-
       this.room.scale.set(0.35, 0.35, 0.35);
     });
   }
-
 
   resize() {
 

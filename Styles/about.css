@@ -1,0 +1,38 @@
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-element {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.myself {
+  flex: 0 0 400px;
+  height: 500px;
+  object-fit: cover;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+.about-me li {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+h2.section-text {
+  margin-top: 20px;
+}
+
+.text-element {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.intro {
+  width: 100vw;
+  height: 100vh;
+}

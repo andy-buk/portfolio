@@ -24,11 +24,9 @@ export default class Room {
 
     setModel() {
 
-        // console.log(this.resources.items.screen.image);
-
         this.actualRoom.traverse((child) => {
             if (child.isMesh) {
-                child.material.map = this.resources.items.screen;  // 'screen' is the texture name defined in the assets.
+                child.material.map = this.resources.items.screen;
                 
                 child.material.needsUpdate = true;
                 child.castShadow = true;
@@ -78,7 +76,5 @@ export default class Room {
         );
 
         this.actualRoom.rotation.y = this.lerp.current;
-
-        // this.mixer.update(this.time.delta * 0.0009);
     }
 }
