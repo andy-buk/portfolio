@@ -1,8 +1,8 @@
 # Andy's Portfolio
 
-![image](https://github.com/andy-buk/portfolio/assets/117706469/157ac0a9-c1b6-42c6-a9bc-f08975117df9)
+[![Website Preview](https://github.com/andy-buk/portfolio/assets/117706469/157ac0a9-c1b6-42c6-a9bc-f08975117df9)](https://www.andyb.tech)
 
-Welcome to the repository of Andy's personal portfolio website, a dynamic showcase of his skills, experiences, and projects. The website is meticulously crafted using the latest web technologies and libraries, designed to deliver an immersive, visually compelling, and user-friendly experience.
+Welcome to the repository of [Andy's personal portfolio website](https://www.andyb.tech), a dynamic showcase of his skills, experiences, and projects. The website is meticulously crafted using the latest web technologies and libraries, designed to deliver an immersive, visually compelling, and user-friendly experience.
 
 ## Technology Stack
 
